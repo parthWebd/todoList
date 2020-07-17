@@ -3,7 +3,7 @@
         <title>
             <%= title %>
         </title>
-        
+        <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	    <script src="https://kit.fontawesome.com/f19d67c548.js" crossorigin="anonymous"></script>
     </head>
@@ -15,7 +15,7 @@
                     <%if(t.isDone==false){%>
                     <li>
                         <%=t.name%>
-                        <a href="/delete/?_id=<%=t._id%>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="/delete/?_id=<%=t._id%>&name=<%=t.name%>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </li>
                     <%}%>
                 <%}%>
@@ -23,5 +23,7 @@
             <input type="text" name="name" placeholder="enter new task">
             <button type="submit">Add new task</button>
         </form>
+        <h1>Completed</h1>
+       
     </body>
 </html>
